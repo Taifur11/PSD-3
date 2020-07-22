@@ -349,14 +349,62 @@ a{
 
 .team_img{
 	margin-bottom: 25px;
+	border-radius:50%;
+	border:10px solid white;
+	position: relative;
+	transition: 1s;
+	overflow: hidden;
 }
+
+
+
 .team_img img{
 	border-radius:50%;
 	display:inline-block;
 	width:100%;
 	height:auto;
-	border:10px solid white;
+	/* position:relative; */
+	transition: 1s;
 }
+
+.team_img_over{
+	position: absolute;
+	top: 0;left: 0;bottom: 0;right: 0;
+	background-color: rgba(0, 0, 0,.7);
+	z-index: 1;
+	border-radius: 50%;
+	transform: scale(1);
+	
+	/* opacity:.7; */
+	transition: 1s;
+}
+
+.team_img:hover .team_img_over{
+	/* opacity: 0; */
+	transform: scale(0);
+}
+.team_img:hover{
+	border:10px solid black;
+}
+.team_img:hover img{
+	transform: scale(1.2);
+}
+
+/* .team_img:before{
+	content: "";
+	position: absolute;
+	top:-10px;left: -10px;bottom: -10px;right: -10px;
+	top: 0;left: 0;bottom: 0;right: 0;
+	background-color: rgba(0, 0, 0,.5);
+	z-index: 1;
+	border-radius: 50%
+}
+
+.team_img:hover:before{
+	z-index: 0;
+} */
+
+
 
 
 
